@@ -95,3 +95,13 @@ table td:hover {
 .againBtn:hover {
   background-color: #0089cf;
 }
+
+@media (max-width: 400px) {
+  #start {
+    top: 250px;
+  }
+
+  .winner {
+    padding-right: 10px;
+  }
+}
