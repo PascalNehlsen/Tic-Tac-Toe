@@ -1,5 +1,6 @@
 let fields = [null, null, null, null, null, null, null, null, null];
 let currentPlayer = 'circle';
+let winnerSound = new Audio('audio/winner.mp3');
 
 function init() {
   render();
@@ -128,6 +129,7 @@ function handleClick(index) {
       <button class="againBtn" onclick="render()">Play again</button>
        `;
       document.getElementById('start').innerHTML = '';
+      winnerSound.play();
     }
   } else {
     fields[index] = null;
@@ -159,5 +161,3 @@ function generateCrossSVG() {
 
   return crossHTML;
 }
-
-init();
